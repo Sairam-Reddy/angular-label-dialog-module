@@ -7,6 +7,7 @@
       fxLayout="row"
       style="margin-left: auto; margin-bottom: 10px"
       mat-stroked-button
+      [disabled]="editItemIndex > -1"
       color="primary"
       (click)="addLabel()"
     >
@@ -33,5 +34,12 @@
 
 <mat-dialog-actions align="end">
   <button mat-raised-button (click)="cancel()">Cancel</button>
-  <button mat-raised-button color="primary" (click)="ok()">OK</button>
+  <button
+    [disabled]="editItemIndex > -1"
+    mat-raised-button
+    color="primary"
+    (click)="ok()"
+  >
+    OK
+  </button>
 </mat-dialog-actions>
