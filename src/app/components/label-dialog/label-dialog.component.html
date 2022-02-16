@@ -10,6 +10,8 @@
         <app-label-item
           [label]="label"
           [isInEditMode]="editItemIndex === index"
+          (onEditStarted)="onEditStarted(index)"
+          (onEditFinished)="onEditFinished(index)"
         ></app-label-item>
       </ng-container>
     </div>

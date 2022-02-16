@@ -41,6 +41,14 @@ export class LabelDialogComponent implements OnInit {
     return this.formArray.controls as Array<FormGroup>;
   }
 
+  public onEditStarted(index: number): void {
+    this.editItemIndex = index;
+  }
+
+  public onEditFinished(index: number): void {
+    this.editItemIndex = -1;
+  }
+
   private createLabelGroup(label: labelDialog): FormGroup {
     return this.formBuilder.group({
       ...label,

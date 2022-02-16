@@ -6,6 +6,7 @@
   [formGroup]="label"
 >
   <mat-checkbox
+    *ngIf="!isInEditMode"
     fxFlex
     fxLayout="row"
     [color]="'primary'"
@@ -15,7 +16,7 @@
   </mat-checkbox>
 
   <mat-form-field *ngIf="isInEditMode" appearance="standard">
-    <input matInput />
+    <input matInput formControlName="name" />
   </mat-form-field>
 
   <div *ngIf="!isInEditMode" fxLayout="row" style="margin-left: auto">
