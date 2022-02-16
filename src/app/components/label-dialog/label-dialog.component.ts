@@ -7,8 +7,6 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./label-dialog.component.scss'],
 })
 export class LabelDialogComponent implements OnInit {
-  public title: 'Title';
-
   constructor(
     private dialogRef: MatDialogRef<LabelDialogComponent>,
     @Inject(MAT_DIALOG_DATA) data: any
