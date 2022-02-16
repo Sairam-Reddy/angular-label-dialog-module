@@ -2,7 +2,7 @@
 
 <mat-dialog-content class="label-dialog-content">
   <mat-selection-list [color]="'primary'" role="listbox">
-    <mat-list-option
+    <!-- <mat-list-option
       checkboxPosition="before"
       [disableRipple]="true"
       role="listitem"
@@ -22,7 +22,11 @@
           </button>
         </div>
       </div>
-    </mat-list-option>
+    </mat-list-option> -->
+    <app-label-item
+      *ngFor="let label of data.labels"
+      [label]="label"
+    ></app-label-item>
   </mat-selection-list>
 </mat-dialog-content>
 

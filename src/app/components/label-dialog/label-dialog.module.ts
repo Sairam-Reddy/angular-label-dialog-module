@@ -9,6 +9,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { FormsModule } from '@angular/forms';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { LabelItemComponent } from './components/label-item.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatListModule,
     MatIconModule,
   ],
-  declarations: [LabelDialogComponent],
+  declarations: [LabelDialogComponent, LabelItemComponent],
   exports: [LabelDialogComponent],
 })
 export class LabelDialogModule {}
