@@ -1,5 +1,7 @@
-<div fxFlex fxLayout="row" class="label-item">
-  <mat-checkbox fxFlex fxLayout="row" [color]="'primary'"> </mat-checkbox>
+<div fxFlex fxLayout="row" fxLayoutAlign="start center" class="label-item">
+  <mat-checkbox fxFlex fxLayout="row" [color]="'primary'">
+    {{ label.get('name').value }}
+  </mat-checkbox>
 
   <div fxLayout="row" style="margin-left: auto">
     <button mat-icon-button class="label-item__action">
