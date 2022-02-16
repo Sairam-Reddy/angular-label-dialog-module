@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { LabelDialogComponent } from './label-dialog.component';
+import { LabelsDialogComponent } from './labels-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
-import { LabelDialogItemComponent } from './components/label-dialog-item.component';
+import { LabelsDialogItemComponent } from './components/labels-dialog-item.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -26,7 +26,7 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     MatInputModule,
   ],
-  declarations: [LabelDialogComponent, LabelDialogItemComponent],
-  exports: [LabelDialogComponent],
+  declarations: [LabelsDialogComponent, LabelsDialogItemComponent],
+  exports: [LabelsDialogComponent],
 })
-export class LabelDialogModule {}
+export class LabelsDialogModule {}

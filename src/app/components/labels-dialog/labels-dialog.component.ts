@@ -11,16 +11,16 @@ import {
 } from '@angular/forms';
 
 @Component({
-  selector: 'app-label-dialog',
-  templateUrl: './label-dialog.component.html',
-  styleUrls: ['./label-dialog.component.scss'],
+  selector: 'app-labels-dialog',
+  templateUrl: './labels-dialog.component.html',
+  styleUrls: ['./labels-dialog.component.scss'],
 })
-export class LabelDialogComponent implements OnInit {
+export class LabelsDialogComponent implements OnInit {
   public formArray: FormArray;
   public editItemIndex: number = -1;
 
   constructor(
-    private dialogRef: MatDialogRef<LabelDialogComponent>,
+    private dialogRef: MatDialogRef<LabelsDialogComponent>,
     @Inject(MAT_DIALOG_DATA)
     public data: {
       title: string;

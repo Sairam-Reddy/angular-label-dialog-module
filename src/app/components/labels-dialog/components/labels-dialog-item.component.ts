@@ -2,11 +2,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-label-dialog-item',
-  templateUrl: './label-dialog-item.component.html',
-  styleUrls: ['./label-dialog-item.component.scss'],
+  selector: 'app-labels-dialog-item',
+  templateUrl: './labels-dialog-item.component.html',
+  styleUrls: ['./labels-dialog-item.component.scss'],
 })
-export class LabelDialogItemComponent implements OnInit {
+export class LabelsDialogItemComponent implements OnInit {
   @Input() public label: FormGroup;
   @Input() public isInEditMode: boolean = false;
 
