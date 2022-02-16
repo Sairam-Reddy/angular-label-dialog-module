@@ -5,6 +5,7 @@
     <mat-list-option
       checkboxPosition="before"
       role="listitem"
+      class="label-item"
       *ngFor="let label of data.labels"
     >
       <div fxFlex fxLayout="row" fxLayoutAlign="start center">
@@ -12,10 +13,10 @@
           {{ label.name }}
         </div>
         <div fxLayout="row" style="margin-left: auto">
-          <button mat-icon-button>
+          <button mat-icon-button class="label-item__action">
             <mat-icon>edit</mat-icon>
           </button>
-          <button mat-icon-button>
+          <button mat-icon-button class="label-item__action">
             <mat-icon>delete</mat-icon>
           </button>
         </div>
