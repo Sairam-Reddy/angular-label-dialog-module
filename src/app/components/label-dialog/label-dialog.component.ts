@@ -49,6 +49,11 @@ export class LabelDialogComponent implements OnInit {
     this.editItemIndex = -1;
   }
 
+  public onDeleted(index: number): void {
+    this.formArray.removeAt(index);
+    this.editItemIndex = -1;
+  }
+
   private createLabelGroup(label: labelDialog): FormGroup {
     return this.formBuilder.group({
       ...label,

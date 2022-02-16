@@ -12,6 +12,7 @@
           [isInEditMode]="editItemIndex === index"
           (onEditStarted)="onEditStarted(index)"
           (onEditFinished)="onEditFinished(index)"
+          (onDeleted)="onDeleted(index)"
         ></app-label-item>
       </ng-container>
     </div>
