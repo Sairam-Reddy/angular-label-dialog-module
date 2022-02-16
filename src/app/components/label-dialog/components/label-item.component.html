@@ -5,7 +5,12 @@
   class="label-item"
   [formGroup]="label"
 >
-  <mat-checkbox fxFlex fxLayout="row" [color]="'primary'">
+  <mat-checkbox
+    fxFlex
+    fxLayout="row"
+    [color]="'primary'"
+    formControlName="selected"
+  >
     {{ label.get('name').value }}
   </mat-checkbox>
 

@@ -11,8 +11,5 @@ export class LabelItemComponent implements OnInit {
 
   constructor() {}
 
-  public ngOnInit(): void {
-    console.log(this.label.value);
-    console.log(this.label.get('id').value);
-  }
+  public ngOnInit(): void {}
 }
