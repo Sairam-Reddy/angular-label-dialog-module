@@ -8,6 +8,7 @@ import { LabelDialogComponent } from './label-dialog.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { FormsModule } from '@angular/forms';
 import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { MatListModule } from '@angular/material/list';
     OverlayModule,
     MatCheckboxModule,
     MatListModule,
+    MatIconModule,
   ],
   declarations: [LabelDialogComponent],
   exports: [LabelDialogComponent],
