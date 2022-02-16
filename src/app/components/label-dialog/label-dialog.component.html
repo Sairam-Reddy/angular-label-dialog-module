@@ -3,7 +3,7 @@
 <mat-dialog-content>
   <ul>
     <li *ngFor="let label of data.labels">
-      <mat-checkbox [(ngModel)]="label.selected">
+      <mat-checkbox [(ngModel)]="label.selected" [color]="'primary'">
         {{ label.name }}
       </mat-checkbox>
     </li>
