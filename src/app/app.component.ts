@@ -1,7 +1,7 @@
 import { Component, VERSION } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { LabelDialogComponent } from './components/label-dialog/label-dialog.component';
-import { labelDialog } from './components/label-dialog/models/label.model';
+import { LabelsDialogComponent } from './components/labels-dialog/labels-dialog.component';
+import { labelDialog } from './components/labels-dialog/models/label.model';
 
 @Component({
   selector: 'my-app',
@@ -19,7 +19,7 @@ export class AppComponent {
   constructor(private dialog: MatDialog) {}
 
   public openDialog(): void {
-    this.dialog.open(LabelDialogComponent, {
+    this.dialog.open(LabelsDialogComponent, {
       data: {
         title: 'Window Labels',
         labels: this.labels,
