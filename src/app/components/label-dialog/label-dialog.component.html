@@ -4,6 +4,7 @@
   <mat-selection-list [color]="'primary'" role="listbox">
     <mat-list-option
       checkboxPosition="before"
+      [disableRipple]="true"
       role="listitem"
       class="label-item"
       *ngFor="let label of data.labels"
