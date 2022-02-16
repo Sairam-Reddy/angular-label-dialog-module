@@ -10,6 +10,7 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LabelDialogComponent implements OnInit {
   public formArray: FormArray;
+  public editItemIndex: number = -1;
 
   constructor(
     private dialogRef: MatDialogRef<LabelDialogComponent>,

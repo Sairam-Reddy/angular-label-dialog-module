@@ -7,7 +7,10 @@
       <ng-container
         *ngFor="let label of getLabelFormGroups(); let index = index"
       >
-        <app-label-item [label]="label" [index]="index"></app-label-item>
+        <app-label-item
+          [label]="label"
+          [isInEditMode]="editItemIndex === index"
+        ></app-label-item>
       </ng-container>
     </div>
     <!-- </mat-selection-list> -->

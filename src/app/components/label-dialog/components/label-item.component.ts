@@ -8,32 +8,30 @@ import { FormGroup } from '@angular/forms';
 })
 export class LabelItemComponent implements OnInit {
   @Input() public label: FormGroup;
-  @Input() public index: number;
   @Input() public isInEditMode: boolean;
 
-  @Output() public onEditStarted: EventEmitter<number> =
-    new EventEmitter<number>();
-  @Output() public onEditFinished: EventEmitter<number> =
-    new EventEmitter<number>();
-  @Output() public onDeleted: EventEmitter<number> = new EventEmitter<number>();
+  @Output() public onEditStarted: EventEmitter<void> = new EventEmitter<void>();
+  @Output() public onEditFinished: EventEmitter<void> =
+    new EventEmitter<void>();
+  @Output() public onDeleted: EventEmitter<void> = new EventEmitter<void>();
 
   constructor() {}
 
   public ngOnInit(): void {}
 
   public onEdit(): void {
-    this.onEditStarted.emit(this.index);
+    this.onEditStarted.emit();
   }
 
   public onSave(): void {
-    this.onEditFinished.emit(this.index);
+    this.onEditFinished.emit();
   }
 
   public onDelete(): void {
-    this.onDeleted.emit(this.index);
+    this.onDeleted.emit();
   }
 
   public onDiscard(): void {
-    this.onEditFinished.emit(this.index);
+    this.onEditFinished.emit();
   }
 }
