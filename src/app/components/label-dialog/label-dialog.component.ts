@@ -71,10 +71,15 @@ export class LabelDialogComponent implements OnInit {
   public onDeleted(index: number): void {
     this.formArray.removeAt(index);
     this.editItemIndex = -1;
+    this.formArray.controls.forEach(
+      (control: AbstractControl, index: number) => {
+        control.enable();
+      }
+    );
   }
 
   public addLabel(): void {
-    const newIndex: number = this.formArray.controls.length + 1;
+    const newIndex: number = this.formArray.controls.length;
     this.formArray.push(
       new FormGroup({
         name: new FormControl('', Validators.required),
@@ -82,7 +87,7 @@ export class LabelDialogComponent implements OnInit {
         selected: new FormControl(false),
       })
     );
-    this.editItemIndex = newIndex;
+    this.onEditStarted(newIndex);
   }
 
   private createLabelGroup(label: labelDialog): FormGroup {

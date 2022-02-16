@@ -15,9 +15,13 @@ export class LabelItemComponent implements OnInit {
     new EventEmitter<void>();
   @Output() public onDeleted: EventEmitter<void> = new EventEmitter<void>();
 
+  private initialValue: string;
+
   constructor() {}
 
-  public ngOnInit(): void {}
+  public ngOnInit(): void {
+    this.initialValue = this.label.get('name').value;
+  }
 
   public onEdit(): void {
     this.onEditStarted.emit();
@@ -32,6 +36,12 @@ export class LabelItemComponent implements OnInit {
   }
 
   public onDiscard(): void {
-    this.onEditFinished.emit();
+    if (this.initialValue) {
+      this.label.get('name').reset(this.initialValue);
+      this.onEditFinished.emit();
+    } else {
+      this.onDeleted.emit();
+      
+    }
   }
 }
