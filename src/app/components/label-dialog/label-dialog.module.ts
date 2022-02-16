@@ -7,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { LabelDialogComponent } from './label-dialog.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { FormsModule } from '@angular/forms';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     MatDialogModule,
     OverlayModule,
     MatCheckboxModule,
+    MatListModule,
   ],
   declarations: [LabelDialogComponent],
   exports: [LabelDialogComponent],
