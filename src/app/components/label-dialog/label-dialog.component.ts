@@ -16,7 +16,11 @@ export class LabelDialogComponent implements OnInit {
 
   public ngOnInit(): void {}
 
-  public cancel(): void {}
+  public cancel(): void {
+    this.dialogRef.close();
+  }
 
-  public ok(): void {}
+  public ok(): void {
+    this.dialogRef.close();
+  }
 }
