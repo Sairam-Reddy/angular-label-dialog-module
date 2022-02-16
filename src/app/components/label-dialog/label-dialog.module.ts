@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { LabelItemComponent } from './components/label-item.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { LabelItemComponent } from './components/label-item.component';
     MatDialogModule,
     MatListModule,
     MatIconModule,
+    MatCheckboxModule,
   ],
   declarations: [LabelDialogComponent, LabelItemComponent],
   exports: [LabelDialogComponent],

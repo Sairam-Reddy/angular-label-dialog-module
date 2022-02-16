@@ -1,12 +1,16 @@
 <h2 mat-dialog-title>{{ data.title }}</h2>
 
 <mat-dialog-content class="label-dialog-content">
-  <mat-selection-list [color]="'primary'" role="listbox">
-    <app-label-item
-      *ngFor="let label of data.labels"
-      [label]="label"
-    ></app-label-item>
-  </mat-selection-list>
+  <form>
+    <!-- <mat-selection-list [color]="'primary'" role="listbox"> -->
+    <div fxFlex fxLayout="column">
+      <app-label-item
+        *ngFor="let label of formArray.controls; let i = index"
+        [label]="label"
+      ></app-label-item>
+    </div>
+    <!-- </mat-selection-list> -->
+  </form>
 </mat-dialog-content>
 
 <mat-dialog-actions align="end">

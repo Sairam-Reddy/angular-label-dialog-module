@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { labelDialog } from './models/label.model';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-label-dialog',
@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./label-dialog.component.scss'],
 })
 export class LabelDialogComponent implements OnInit {
-  public formGroup: FormGroup;
+  public formArray: FormArray;
 
   constructor(
     private dialogRef: MatDialogRef<LabelDialogComponent>,
@@ -22,13 +22,9 @@ export class LabelDialogComponent implements OnInit {
   ) {}
 
   public ngOnInit(): void {
-    this.formGroup = this.formBuilder.group({
-      labels: this.formBuilder.array(
-        this.data.labels.map((label: labelDialog) =>
-          this.createLabelGroup(label)
-        )
-      ),
-    });
+    this.formArray = this.formBuilder.array(
+      this.data.labels.map((label: labelDialog) => this.createLabelGroup(label))
+    );
   }
 
   public cancel(): void {

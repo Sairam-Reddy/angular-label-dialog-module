@@ -1,20 +1,12 @@
-<mat-list-option
-  checkboxPosition="before"
-  [disableRipple]="true"
-  role="listitem"
-  class="label-item"
->
-  <div fxFlex fxLayout="row" fxLayoutAlign="start center">
-    <div matLine [title]="label.name">
-      {{ label.name }}
-    </div>
-    <div fxLayout="row" style="margin-left: auto">
-      <button mat-icon-button class="label-item__action">
-        <mat-icon>edit</mat-icon>
-      </button>
-      <button mat-icon-button class="label-item__action">
-        <mat-icon>delete</mat-icon>
-      </button>
-    </div>
+<div fxFlex fxLayout="row" class="label-item">
+  <mat-checkbox fxFlex fxLayout="row" [color]="'primary'"> </mat-checkbox>
+
+  <div fxLayout="row" style="margin-left: auto">
+    <button mat-icon-button class="label-item__action">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button class="label-item__action">
+      <mat-icon>delete</mat-icon>
+    </button>
   </div>
-</mat-list-option>
+</div>
