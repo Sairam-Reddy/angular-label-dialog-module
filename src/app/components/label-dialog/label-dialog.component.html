@@ -3,8 +3,6 @@
 <mat-dialog-content> </mat-dialog-content>
 
 <mat-dialog-actions align="right">
-  <button mat-raised-button *ngIf="showCancel" (click)="cancel()">
-    Cancel
-  </button>
+  <button mat-raised-button (click)="cancel()">Cancel</button>
   <button mat-raised-button color="primary" (click)="ok()">OK</button>
 </mat-dialog-actions>
