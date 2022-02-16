@@ -2,27 +2,6 @@
 
 <mat-dialog-content class="label-dialog-content">
   <mat-selection-list [color]="'primary'" role="listbox">
-    <!-- <mat-list-option
-      checkboxPosition="before"
-      [disableRipple]="true"
-      role="listitem"
-      class="label-item"
-      *ngFor="let label of data.labels"
-    >
-      <div fxFlex fxLayout="row" fxLayoutAlign="start center">
-        <div matLine [title]="label.name">
-          {{ label.name }}
-        </div>
-        <div fxLayout="row" style="margin-left: auto">
-          <button mat-icon-button class="label-item__action">
-            <mat-icon>edit</mat-icon>
-          </button>
-          <button mat-icon-button class="label-item__action">
-            <mat-icon>delete</mat-icon>
-          </button>
-        </div>
-      </div>
-    </mat-list-option> -->
     <app-label-item
       *ngFor="let label of data.labels"
       [label]="label"

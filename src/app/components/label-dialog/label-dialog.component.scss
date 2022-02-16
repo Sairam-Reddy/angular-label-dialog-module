@@ -3,14 +3,4 @@
   min-height: 50vh;
 }
 
-.label-item {
-  &__action {
-    visibility: hidden;
-  }
 
-  &:hover {
-    .label-item__action {
-      visibility: visible;
-    }
-  }
-}
