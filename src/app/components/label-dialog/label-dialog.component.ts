@@ -40,8 +40,8 @@ export class LabelDialogComponent implements OnInit {
   }
 
   public ok(): void {
-    this.dialogRef.close();
     console.log(this.formArray.value);
+    this.dialogRef.close(this.formArray.value);
   }
 
   public getLabelFormGroups(): Array<FormGroup> {
