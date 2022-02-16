@@ -4,10 +4,9 @@
   <form>
     <!-- <mat-selection-list [color]="'primary'" role="listbox"> -->
     <div fxFlex fxLayout="column">
-      <app-label-item
-        *ngFor="let label of formArray.controls; let i = index"
-        [label]="label"
-      ></app-label-item>
+      <ng-container *ngFor="let label of getLabelFormGroups()">
+        <app-label-item [label]="label"></app-label-item>
+      </ng-container>
     </div>
     <!-- </mat-selection-list> -->
   </form>

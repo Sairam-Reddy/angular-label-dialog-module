@@ -1,4 +1,10 @@
-<div fxFlex fxLayout="row" fxLayoutAlign="start center" class="label-item">
+<div
+  fxFlex
+  fxLayout="row"
+  fxLayoutAlign="start center"
+  class="label-item"
+  [formGroup]="label"
+>
   <mat-checkbox fxFlex fxLayout="row" [color]="'primary'">
     {{ label.get('name').value }}
   </mat-checkbox>

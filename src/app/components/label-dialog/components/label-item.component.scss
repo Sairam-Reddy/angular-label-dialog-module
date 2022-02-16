@@ -1,4 +1,19 @@
 .label-item {
+  ::ng-deep {
+    .mat-checkbox-inner-container {
+      margin-top: 3px !important;
+    }
+
+    .mat-checkbox-layout {
+      align-items: center;
+
+      .mat-checkbox-label {
+        line-height: 18px;
+        overflow: hidden;
+      }
+    }
+  }
+
   &__action {
     visibility: hidden;
   }

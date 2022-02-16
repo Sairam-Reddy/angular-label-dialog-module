@@ -35,6 +35,10 @@ export class LabelDialogComponent implements OnInit {
     this.dialogRef.close();
   }
 
+  public getLabelFormGroups(): Array<FormGroup> {
+    return this.formArray.controls as Array<FormGroup>;
+  }
+
   private createLabelGroup(label: labelDialog): FormGroup {
     return this.formBuilder.group({
       ...label,
