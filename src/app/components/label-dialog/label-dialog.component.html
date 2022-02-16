@@ -3,7 +3,17 @@
 <mat-dialog-content class="label-dialog-content">
   <form>
     <!-- <mat-selection-list [color]="'primary'" role="listbox"> -->
-    <div fxFlex fxLayout="column">
+
+    <div fxLayout="column">
+      <button
+        fxLayout="row"
+        dir="rtl"
+        mat-stroked-button
+        color="primary"
+        (click)="cancel()"
+      >
+        Add
+      </button>
       <ng-container
         *ngFor="let label of getLabelFormGroups(); let index = index"
       >
@@ -17,6 +27,7 @@
         ></app-label-item>
       </ng-container>
     </div>
+
     <!-- </mat-selection-list> -->
   </form>
 </mat-dialog-content>
