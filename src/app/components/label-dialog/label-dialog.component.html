@@ -10,6 +10,7 @@
         <app-label-item
           [label]="label"
           [isInEditMode]="editItemIndex === index"
+          [isDisabled]="editItemIndex > -1 && editItemIndex !== index"
           (onEditStarted)="onEditStarted(index)"
           (onEditFinished)="onEditFinished(index)"
           (onDeleted)="onDeleted(index)"

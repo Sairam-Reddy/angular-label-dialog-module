@@ -8,7 +8,8 @@ import { FormGroup } from '@angular/forms';
 })
 export class LabelItemComponent implements OnInit {
   @Input() public label: FormGroup;
-  @Input() public isInEditMode: boolean;
+  @Input() public isInEditMode: boolean = false;
+  @Input() public isDisabled: boolean = false;
 
   @Output() public onEditStarted: EventEmitter<void> = new EventEmitter<void>();
   @Output() public onEditFinished: EventEmitter<void> =
