@@ -11,9 +11,14 @@
         <div matLine [title]="label.name">
           {{ label.name }}
         </div>
-        <button mat-icon-button>
-          <mat-icon>edit</mat-icon>
-        </button>
+        <div fxLayout="row" style="margin-left: auto">
+          <button mat-icon-button>
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
       </div>
     </mat-list-option>
   </mat-selection-list>
