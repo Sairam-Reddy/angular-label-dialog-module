@@ -5,6 +5,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LabelDialogComponent } from './label-dialog.component';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { LabelDialogComponent } from './label-dialog.component';
     FlexLayoutModule,
     MatButtonModule,
     MatDialogModule,
+    OverlayModule,
     MatCheckboxModule,
   ],
   declarations: [LabelDialogComponent],
