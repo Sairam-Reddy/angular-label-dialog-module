@@ -1,7 +1,14 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { labelDialog } from './models/label.model';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  AbstractControl,
+  FormArray,
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-label-dialog',
@@ -43,15 +50,39 @@ export class LabelDialogComponent implements OnInit {
 
   public onEditStarted(index: number): void {
     this.editItemIndex = index;
+    this.formArray.controls.forEach(
+      (control: AbstractControl, index: number) => {
+        if (this.editItemIndex !== index) {
+          control.disable();
+        }
+      }
+    );
   }
 
-  public onEditFinished(index: number): void {
+  public onEditFinished(): void {
     this.editItemIndex = -1;
+    this.formArray.controls.forEach(
+      (control: AbstractControl, index: number) => {
+        control.enable();
+      }
+    );
   }
 
   public onDeleted(index: number): void {
     this.formArray.removeAt(index);
     this.editItemIndex = -1;
+  }
+
+  public addLabel(): void {
+    const newIndex: number = this.formArray.controls.length + 1;
+    this.formArray.push(
+      new FormGroup({
+        name: new FormControl('', Validators.required),
+        id: new FormControl(newIndex),
+        selected: new FormControl(false),
+      })
+    );
+    this.editItemIndex = newIndex;
   }
 
   private createLabelGroup(label: labelDialog): FormGroup {

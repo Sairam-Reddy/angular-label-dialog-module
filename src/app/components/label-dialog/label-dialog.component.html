@@ -3,26 +3,25 @@
 <mat-dialog-content class="label-dialog-content">
   <form>
     <!-- <mat-selection-list [color]="'primary'" role="listbox"> -->
+    <button
+      fxLayout="row"
+      style="margin-left: auto; margin-bottom: 10px"
+      mat-stroked-button
+      color="primary"
+      (click)="addLabel()"
+    >
+      Add
+    </button>
 
     <div fxLayout="column">
-      <button
-        fxLayout="row"
-        dir="rtl"
-        mat-stroked-button
-        color="primary"
-        (click)="cancel()"
-      >
-        Add
-      </button>
       <ng-container
         *ngFor="let label of getLabelFormGroups(); let index = index"
       >
         <app-label-item
           [label]="label"
           [isInEditMode]="editItemIndex === index"
-          [isDisabled]="editItemIndex > -1 && editItemIndex !== index"
           (onEditStarted)="onEditStarted(index)"
-          (onEditFinished)="onEditFinished(index)"
+          (onEditFinished)="onEditFinished()"
           (onDeleted)="onDeleted(index)"
         ></app-label-item>
       </ng-container>
