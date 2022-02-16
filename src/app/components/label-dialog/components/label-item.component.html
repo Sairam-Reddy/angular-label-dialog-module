@@ -14,11 +14,15 @@
     {{ label.get('name').value }}
   </mat-checkbox>
 
-  <div fxLayout="row" style="margin-left: auto">
-    <button mat-icon-button class="label-item__action">
+  <mat-form-field *ngIf="isInEditMode" appearance="standard">
+    <input matInput />
+  </mat-form-field>
+
+  <div *ngIf="!isInEditMode" fxLayout="row" style="margin-left: auto">
+    <button mat-icon-button class="label-item__action" (click)="onEdit()">
       <mat-icon>edit</mat-icon>
     </button>
-    <button mat-icon-button class="label-item__action">
+    <button mat-icon-button class="label-item__action" (click)="onDelete()">
       <mat-icon>delete</mat-icon>
     </button>
   </div>

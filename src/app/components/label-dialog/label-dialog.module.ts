@@ -9,6 +9,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { LabelItemComponent } from './components/label-item.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   imports: [
@@ -21,6 +23,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatListModule,
     MatIconModule,
     MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   declarations: [LabelDialogComponent, LabelItemComponent],
   exports: [LabelDialogComponent],
