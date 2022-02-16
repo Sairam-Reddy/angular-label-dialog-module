@@ -18,13 +18,13 @@
       <ng-container
         *ngFor="let label of getLabelFormGroups(); let index = index"
       >
-        <app-label-item
+        <app-label-dialog-item
           [label]="label"
           [isInEditMode]="editItemIndex === index"
           (onEditStarted)="onEditStarted(index)"
           (onEditFinished)="onEditFinished()"
           (onDeleted)="onDeleted(index)"
-        ></app-label-item>
+        ></app-label-dialog-item>
       </ng-container>
     </div>
 

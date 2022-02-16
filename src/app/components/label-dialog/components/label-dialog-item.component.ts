@@ -2,11 +2,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-label-item',
-  templateUrl: './label-item.component.html',
-  styleUrls: ['./label-item.component.scss'],
+  selector: 'app-label-dialog-item',
+  templateUrl: './label-dialog-item.component.html',
+  styleUrls: ['./label-dialog-item.component.scss'],
 })
-export class LabelItemComponent implements OnInit {
+export class LabelDialogItemComponent implements OnInit {
   @Input() public label: FormGroup;
   @Input() public isInEditMode: boolean = false;
 
@@ -41,7 +41,6 @@ export class LabelItemComponent implements OnInit {
       this.onEditFinished.emit();
     } else {
       this.onDeleted.emit();
-      
     }
   }
 }
