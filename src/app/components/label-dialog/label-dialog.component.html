@@ -1,11 +1,6 @@
 <h2 mat-dialog-title>Title</h2>
 
 <mat-dialog-content class="label-dialog-content">
-  <!-- <div *ngFor="let label of data.labels">
-    <mat-checkbox [(ngModel)]="label.selected" [color]="'primary'">
-      {{ label.name }}
-    </mat-checkbox>
-  </div> -->
   <mat-selection-list [color]="'primary'" role="listbox">
     <mat-list-option
       checkboxPosition="before"
@@ -15,9 +10,9 @@
       <div matLine [title]="label.name">
         {{ label.name }}
       </div>
-      <!-- <button mat-icon-button>
+      <button mat-icon-button>
         <mat-icon> </mat-icon>
-      </button> -->
+      </button>
     </mat-list-option>
   </mat-selection-list>
 </mat-dialog-content>
