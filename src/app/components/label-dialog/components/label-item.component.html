@@ -7,6 +7,7 @@
 >
   <mat-checkbox
     *ngIf="!isInEditMode"
+    [disabled]="isDisabled"
     fxFlex
     fxLayout="row"
     [color]="'primary'"
@@ -19,7 +20,11 @@
     <input matInput formControlName="name" />
   </mat-form-field>
 
-  <div *ngIf="!isInEditMode" fxLayout="row" style="margin-left: auto">
+  <div
+    *ngIf="!isInEditMode && !isDisabled"
+    fxLayout="row"
+    style="margin-left: auto"
+  >
     <button mat-icon-button class="label-item__action" (click)="onEdit()">
       <mat-icon>edit</mat-icon>
     </button>
