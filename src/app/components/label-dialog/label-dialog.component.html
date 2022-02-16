@@ -7,12 +7,16 @@
       role="listitem"
       *ngFor="let label of data.labels"
     >
-      <div matLine [title]="label.name">
-        {{ label.name }}
+      <div fxFlex fxLayout="row">
+        <div matLine [title]="label.name">
+          {{ label.name }}
+        </div>
+        <mat-icon>create</mat-icon>
       </div>
-      <button mat-icon-button>
-        <mat-icon>edit</mat-icon>
-      </button>
+
+      <!-- <button mat-icon-button> -->
+
+      <!-- </button> -->
     </mat-list-option>
   </mat-selection-list>
 </mat-dialog-content>
