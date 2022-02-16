@@ -26,4 +26,13 @@
       <mat-icon>delete</mat-icon>
     </button>
   </div>
+
+  <div *ngIf="isInEditMode" fxLayout="row" style="margin-left: auto">
+    <button mat-icon-button class="label-item__action" (click)="onSave()">
+      <mat-icon>check_circle</mat-icon>
+    </button>
+    <button mat-icon-button class="label-item__action" (click)="onDiscard()">
+      <mat-icon>cancel</mat-icon>
+    </button>
+  </div>
 </div>
